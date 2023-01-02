@@ -10,6 +10,11 @@ To run the app flawlessly, satisfy the requirements
 $ pip install -r requirements.txt
 ```
 
+To update dependencies
+```bash
+$ pip install -U -r requirements.txt
+```
+
 ## Start Server
 ```bash
 $ flask run
