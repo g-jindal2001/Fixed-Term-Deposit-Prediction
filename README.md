@@ -1,7 +1,7 @@
 # Bank Marketing Anaysis and Prediction
 A simple flask app to predict whether a customer subscibes to a term deposit of the bank
 
-![Bank Marketing Anaysis and Prediction - Flask](https://github.com/hamzaavvan/library-management-system/blob/master/ss/ss2.JPG?raw=true)
+![Bank Marketing Anaysis and Prediction - Flask](https://drive.google.com/file/d/1ZC7MhZ9OnhRg6LKIBh6AlgZAgtHKpGiD/view?usp=share_link)
 
 ## Installation
 
