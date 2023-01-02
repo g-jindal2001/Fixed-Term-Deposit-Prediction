@@ -31,9 +31,9 @@ class CustomerForm(FlaskForm):
     month = SelectField('Last Contact Month', validators=[DataRequired()], choices=[
         (0, 'January'), (1, 'February'), (2, 'March'), (3, 'April'), (4, 'May'), (5, 'June'), (6, 'July'), (7, 'August'), (8, 'September'), (9, 'October'), (10, 'November'), (11, 'December')])
     campaign = IntegerField(
-        'Contacts performed during current campaign for this client', validators=[DataRequired(), NumberRange(min=1, max=10)])
+        'How many times client has been contacted during current campaign?', validators=[DataRequired(), NumberRange(min=1, max=10)])
     previous = IntegerField(
-        'Contacts performed during previous campaign for this client', validators=[DataRequired(), NumberRange(min=1, max=10)])
+        'How many times client has been contacted during previous campaign?', validators=[DataRequired(), NumberRange(min=1, max=10)])
     previous_outcome = SelectField('Outcome of previous campaign', validators=[DataRequired()], choices=[
         (2, 'Success'), (0, 'Failure'), (1, 'Other')])
     submit = SubmitField('Submit')

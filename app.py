@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, flash, redirect
 from forms import CustomerForm
 import xgboost as xgb
 import numpy as np
-import pandas as pd
+#import pandas as pd
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -65,7 +65,7 @@ def home():
                             martial_status_array[0], martial_status_array[1], martial_status_array[2], month_sin, month_cos,
                             campaign, previous]]
 
-        prediction = model.predict(pd.DataFrame(prediction_array))
+        prediction = model.predict(prediction_array)
 
         flash(f'The customer will receive the term deposit', 'success') if int(
             prediction[0]) == 1 else flash(f'The customer will not receive the term deposit', 'danger')
@@ -78,5 +78,5 @@ def about():
     return render_template('about.html', title='About')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
