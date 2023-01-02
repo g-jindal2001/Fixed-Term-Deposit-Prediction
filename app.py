@@ -2,7 +2,6 @@ from flask import Flask, render_template, url_for, flash, redirect
 from forms import CustomerForm
 import xgboost as xgb
 import numpy as np
-import git
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -11,16 +10,6 @@ MODEL_PATH = 'xgb_model_selected_sklearn.json'
 
 model = xgb.XGBClassifier()
 model.load_model(MODEL_PATH)
-
-@app.route('/git_update', methods=['POST'])
-def git_update():
-    repo = git.Repo('./Bank-Marketing-Analysis-and-Prediction')
-    origin = repo.remotes.origin
-    repo.create_head('master',
-                     origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
-    origin.pull()
-    return '', 200
-
 
 @ app.route("/", methods=['GET', 'POST'])
 @ app.route("/home", methods=['GET', 'POST'])
