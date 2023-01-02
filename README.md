@@ -19,3 +19,6 @@ Or run this command
 ```bash
 $ python -m flask run
 ```
+
+## Dataset
+https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
